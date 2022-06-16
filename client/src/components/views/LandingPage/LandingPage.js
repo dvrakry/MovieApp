@@ -3,7 +3,7 @@ import { FaCode } from "react-icons/fa";
 import { API_URL, API_KEY, IMAGE_BASE_URL } from "../../Config";
 import MainImage from "./Sections/MainImage";
 import GridCards from "../commons/GridCards";
-import { Row } from "antd";
+import { Row, Button } from "antd";
 
 function LandingPage() {
   const [Movies, setMovies] = useState([]);
@@ -41,6 +41,7 @@ function LandingPage() {
             Movies.map((movie, index) => (
               <React.Fragment key={index}>
                 <GridCards
+                  landingPage
                   image={
                     movie.poster_path
                       ? `${IMAGE_BASE_URL}w500${movie.poster_path}`
@@ -55,7 +56,7 @@ function LandingPage() {
       </div>
 
       <div style={{ display: "flex", justifyContent: "center" }}>
-        <button> Load More </button>
+        <Button> Load More </Button>
       </div>
     </div>
   );
