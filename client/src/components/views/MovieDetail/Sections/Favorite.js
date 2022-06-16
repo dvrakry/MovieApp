@@ -17,6 +17,7 @@ function Favorite(props) {
     movieId: movieId,
     movieTitle: movieTitle,
     movieRunTime: movieRunTime,
+    moviePost: moviePost,
   };
 
   useEffect(() => {
